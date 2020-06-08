@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
                 radius: 50.0,
@@ -35,51 +36,44 @@ class MyApp extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              Container(
-                color: Colors.white,
-                padding: EdgeInsets.all(10),
-                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.phone,
-                      color: Colors.teal[200],
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      "310-902-9238",
-                      style: TextStyle(
-                        color: Colors.teal.shade900,
-                        fontFamily: "SourceSansPro",
-                        fontSize: 15,
-                      ),
-                    ),
-                  ],
+              SizedBox(
+                height: 20,
+                width: 250,
+                child: Divider(
+                  color: Colors.teal.shade100,
                 ),
               ),
-              Container(
-                color: Colors.white,
-                padding: EdgeInsets.all(10),
+              Card(
                 margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.email,
-                      color: Colors.teal[200],
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    "+01 310-902-9234",
+                    style: TextStyle(
+                      fontFamily: "SourceSansPro",
+                      fontSize: 17,
+                      color: Colors.teal.shade900,
                     ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      "sherrycheng@gmail.com",
+                  ),
+                ),
+              ),
+              Card(
+                //padding: EdgeInsets.all(10),
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.teal,
+                  ),
+                  title: Text("sherrycheng@gmail.com",
                       style: TextStyle(
-                          color: Colors.teal.shade900,
-                          fontSize: 15,
-                          fontFamily: "SourceSansPro"),
-                    ),
-                  ],
+                        fontFamily: "SourceSansPro",
+                        fontSize: 17,
+                        color: Colors.teal.shade900,
+                      )),
                 ),
               ),
             ],
